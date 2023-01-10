@@ -436,7 +436,7 @@ function _dialogflowResponse(data)
     // of the speakTheText() function:
     // misty.SaveAudio("tts.wav", response.outputAudio, true, true);
 
-    if (intent == "YOUR_INTENT_NAME") 
+    if (intent == "tell.joke") 
     {
         misty.Set("textToSpeak", response.queryResult.fulfillmentText, false);
         speakTheText();
