@@ -3,6 +3,7 @@
   "UniqueId": "ebfecd34-f062-49fa-9661-03824004774d",
   "Description": "My skill is amazing!",
   "StartupRules": [
+    "Startup",
     "Manual",
     "Robot"
   ],
