@@ -44,8 +44,8 @@ conciergeBaseTemplate.json meta file.
 
 function setCredentials() 
 {
-    misty.Set('cloudFunctionAuthTokenURL', "YOUR_TRIGGER_URL_TO_GOOGLE_CLOUD_FUNCTION_THAT_PROVIDES_ACCESS_TOKEN", false);
-    misty.Set("GoogleCloudProjectID", "YOUR_GOOGLE_CLOUD_PROJECT_ID", false);
+    misty.Set('cloudFunctionAuthTokenURL', "https://us-central1-misty-talks-cycu.cloudfunctions.net/authToken", false);
+    misty.Set("GoogleCloudProjectID", "misty-talks-cycu", false);
     misty.Set("langCodeForTTS", "en-US", false);
 }
 setCredentials();
