@@ -438,9 +438,14 @@ function _dialogflowResponse(data)
 
     if (intent == "tell.joke") 
     {
-        misty.Set("textToSpeak", response.queryResult.fulfillmentText, false);
+        misty.SendExternalRequest(
+            "GET",
+            "https://icanhazdadjoke.com/"
+            )
+        _data = JSON.parse(data.Result.ResponseObject.Data)
+        _joke = _data.joke();
+        misty.Set("textToSpeak", _joke, false);
         speakTheText();
-        // Do Something
     } 
     else if (intent == "YOUR_OTHER_INTENT_NAME") 
     {
